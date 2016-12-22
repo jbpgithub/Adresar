@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Novi kontakt</title>
+    <link rel="stylesheet" href="css/stil.css">
+    <style>
+input[type=text] {
+    width: 100%;
+}
+</style>
+</head>
+<body>
+<header>
+    <h1>Adresar</h1>
+</header>
+<ul>
+    <li><a href="meni.html">Izbornik</a></li>
+    <li><a href="c_new.html">Novi kontakt</a></li>
+    <li><a href="c_list.html">Prikaz kontakta</a></li>
+    <li><a href="c_edit.html">Uredi kontakt</a></li>
+    <li style="float: right"><a href="login.html">Odjava</a></li>
+</ul>
+
+<table><tr><th>NOVI KONTAKT</th></tr></table>
+<form action="c_list.html">
+<table id="novi">
+           <tr>
+               <th>Ime Prezime:</th>
+               <td><input type="text" name="imeprezime" title="Unesite Ime Prezime"/></td>
+           </tr>
+    <tr><th>Email:</th>
+        <td><input type="text" name="email" title="Unesite email"/></td></tr>
+    <tr><th>Telefon:</th>
+        <td><input type="text" name="tel" title="Unesite broj telefon"/></td></tr>
+    <tr><th>Faks:</th>
+        <td><input type="text" name="fax" title="Unesite broj faksa"/></td></tr>
+    <tr><th>Mobitel:</th>
+        <td><input type="text" name="mob" title="Unesite broj mobitela"/></td></tr>
+    <tr><th>Spol:</th><td><select name="spol">
+        <option value="men">Muško</option>
+        <option value="female">Žensko</option>
+        <option value="other">Ne zna ni sam</option>
+    </select></td></tr>
+    <tr><th>Adresa:</th>
+        <td><input type="text" name="adresa" title="Unesite adresu"/></td></tr>
+    <tr><th>Grad:</th>
+        <td><input type="text" name="Grad" title="Unesite grad"/></td></tr>
+    <tr><th>Država:</th>
+        <td><input type="text" name="Država" title="Unesite državu"/></td></tr>
+</table>
+    <input type="submit" value="Spremi">
+</form>
+
+    <footer>Copyright &copy; JBP</footer>
+</body>
+</html>
