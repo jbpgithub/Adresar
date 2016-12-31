@@ -1,34 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>Izbornik</title>
+    <meta charset="UTF-8">
+    <!-- Start Responsive Web Design - Bootstrap  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- End Responsive Web Design - Bootstrap  -->
+    <link rel="stylesheet" href="css/myBootstrap.css">
+    <!--
     <link rel="stylesheet" href="css/stil.css">
-
-    <style>
-input {
-        width: 150px;
-}
-</style>
+    -->
 </head>
 <body>
 <header>
-    <h1>Adresar</h1>
+    <div class="container page-header media">
+        <div class="media-left media-middle">
+            <img src="img/jbp_tb.png" class="media-object" alt="jpb logo" style="height:50px;">
+        </div>
+        <div class="media-body">
+            <h1>Adresar</h1>
+        </div>
+    </div>
 </header>
-<ul>
-    <li style="float: right"><a href="login.html">Odjava</a></li>
-</ul>
-<br>
-<form action="c_list.html">
-    <input type="submit" value="Svi kontakti" title="Prikaz svih kontakta">
-</form>
-<br>
-<form action="c_new.html">
-    <input type="submit" value="Novi kontakt" title="Prikaz svih kontakta">
-</form>
-<br>
+<!-- Navigation Bars -->
+<nav class="container navbar navbar-inverse">
+    <!-- -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
 
-<footer>Copyright &copy; JBP</footer>
+        <form class="navbar-form" role="search">
+            <div class="form-group input-group">
+                <input type="text" class="form-control" placeholder="Traži..">
+                <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">
+                            <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+            </div>
+        </form>
+    </div>
+    <!--   -->
+    <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+            <!--   <li><a href="meni.html">Izbornik</a></li>
+                   <li><a href="c_new.html">Novi kontakt</a></li>
+                   <li><a href="c_list.html">Prikaz kontakta</a></li>
+                   <li><a href="c_edit.html">Uredi kontakt</a></li>
+             -->
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="login.html"><span class="glyphicon glyphicon-log-out"></span> Odjava</a></li>
+        </ul>
+    </div>
+    <!--
+    <div class="collapse navbar-collapse" id="mySNavbar">
+        <ul class="nav navbar-nav">
+            <li><form class="navbar-form" role="search">
+                <div class="form-group input-group">
+                    <input type="text" class="form-control" placeholder="Traži..">
+
+                    <span class="input-group-btn">
+            <button class="btn btn-default" type="button">
+              <span class="glyphicon glyphicon-search"></span>
+            </button>
+          </span>
+                </div>
+            </form></li>
+        </ul>
+    </div>
+    -->
+</nav>
+
+<!-- Menu -->
+<div class="container">
+    <div class="well">
+        <a href="c_list.html" class="btn btn-default btn-lg btn-block" role="button" data-toggle="tooltip"
+           data-placement="auto" title="Prikaz svih kontakta">
+            <span class="glyphicon glyphicon-th-list"></span> Svi kontakti</a>
+        <br>
+        <a href="c_new.html" class="btn btn-default btn-lg btn-block" role="button" data-toggle="tooltip"
+           data-placement="auto" title="Kreiraj novi kontakt">
+            <span class="glyphicon glyphicon-user"></span> Novi kontakt</a>
+    </div>
+</div>
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+
+<footer class="container text-center">Copyright &copy; JBP</footer>
+
 </body>
 
 </html>

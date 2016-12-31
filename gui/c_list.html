@@ -1,79 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>Popis kontakta</title>
+    <meta charset="UTF-8">
+    <!-- Start Responsive Web Design - Bootstrap  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- End Responsive Web Design - Bootstrap  -->
+    <link rel="stylesheet" href="css/myBootstrap.css">
+    <!--
     <link rel="stylesheet" href="css/stil.css">
-
-    <style>
-
-</style>
+    -->
 </head>
 <body>
 <header>
-    <h1>Adresar</h1>
+    <div class="container page-header media">
+        <div class="media-left media-middle">
+            <img src="img/jbp_tb.png" class="media-object" alt="jpb logo" style="height:50px;">
+        </div>
+        <div class="media-body">
+            <h1>Adresar</h1>
+        </div>
+    </div>
 </header>
-<ul>
-    <li><a href="meni.html">Izbornik</a></li>
-    <li><a href="c_new.html">Novi kontakt</a></li>
-    <li><a href="c_list.html">Prikaz kontakta</a></li>
-    <li><a href="c_edit.html">Uredi kontakt</a></li>
-    <li style="float: right"><a href="login.html">Odjava</a></li>
-  </ul>
+<!-- Navigation Bars -->
+<nav class="container navbar navbar-inverse">
+    <!-- -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+
+        <form class="navbar-form" role="search">
+            <div class="form-group input-group">
+                <input type="text" class="form-control" placeholder="Traži..">
+                <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">
+                            <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+            </div>
+        </form>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+            <li><a href="meni.html">Izbornik</a></li>
+            <li><a href="c_new.html">Novi kontakt</a></li>
+            <!--<li><a href="c_list.html">Prikaz kontakta</a></li>
+                   <li><a href="c_edit.html">Uredi kontakt</a></li>
+             -->
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="login.html"><span class="glyphicon glyphicon-log-out"></span> Odjava</a></li>
+        </ul>
+    </div>
+</nav>
+<!-- Navigation Bars End -->
+
+<div class="container">
 <form action="c_edit.html">
-<table>
-    <tr>
-        <th>Uredi</th>
-        <th>Ime Prezime</th>
-        <th>Email</th>
-        <th>Telefon</th>
-        <th>Fax</th>
-        <th>Mobitel</th>
-        <th>Spol</th>
-        <th>Adresa</th>
-        <th>Grad</th>
-        <th>Država</th>
-    </tr>
-    <tr>
-        <th><input type="submit" value="Izmjeni"></th>
-        <td>Pero Perić</td>
-        <td>pero.peric@gmail.com</td>
-        <td>01 2222 222</td>
-        <td>01 2222 223</td>
-        <td>099 222 222</td>
-        <td>Muško</td>
-        <td>Ulica 1</td>
-        <td>Zagreb</td>
-        <td>Hrvatska</td>
-    </tr>
-    <tr>
-        <th><input type="submit" value="Izmjeni"></th>
-        <td>Ivo Ivić</td>
-        <td>ivo.ivic@gmail.com</td>
-        <td>01 2223 222</td>
-        <td>01 2223 223</td>
-        <td>099 223 222</td>
-        <td>Muško</td>
-        <td>Ulica 2</td>
-        <td>Split</td>
-        <td>Hrvatska</th>
-    </tr>
-    <tr>
-        <th><input type="submit" value="Izmjeni"></th>
-        <td>Pero Hrabri</td>
-        <td>pero.hrabri@gmail.com</td>
-        <td>01 2224 222</td>
-        <td>01 2224 223</td>
-        <td>099 224 222</th>
-        <td>Muško</td>
-        <td>Ulica 5</td>
-        <td>Zabok</td>
-        <td>Hrvatska</td>
-    </tr>
-</table>
-    </form>
+    <div class="table-responsive">
+        <table class="table table-hover table-striped">
+            <tr>
+                <th>Uredi</th>
+                <th>Ime Prezime</th>
+                <th>Email</th>
+                <th>Telefon</th>
+                <th>Fax</th>
+                <th>Mobitel</th>
+                <th>Spol</th>
+                <th>Adresa</th>
+                <th>Grad</th>
+                <th>Država</th>
+            </tr>
+            <tr>
+                <th><input type="submit" value="Izmjeni"></th>
+                <td>Pero Perić</td>
+                <td>pero.peric@gmail.com</td>
+                <td>01 2222 222</td>
+                <td>01 2222 223</td>
+                <td>099 222 222</td>
+                <td>Muško</td>
+                <td>Ulica 1</td>
+                <td>Zagreb</td>
+                <td>Hrvatska</td>
+            </tr>
+            <tr>
+                <th><input type="submit" value="Izmjeni"></th>
+                <td>Ivo Ivić</td>
+                <td>ivo.ivic@gmail.com</td>
+                <td>01 2223 222</td>
+                <td>01 2223 223</td>
+                <td>099 223 222</td>
+                <td>Muško</td>
+                <td>Ulica 2</td>
+                <td>Split</td>
+                <td>Hrvatska</td>
+
+            </tr>
+            <tr>
+                <th><input type="submit" value="Izmjeni"></th>
+                <td>Pero Hrabri</td>
+                <td>pero.hrabri@gmail.com</td>
+                <td>01 2224 222</td>
+                <td>01 2224 223</td>
+                <td>099 224 222</td>
+                <td>Muško</td>
+                <td>Ulica 5</td>
+                <td>Zabok</td>
+                <td>Hrvatska</td>
+            </tr>
+        </table>
+    </div>
+</form>
+</div>
 
 
-<footer>Copyright &copy; JBP</footer>
+<footer class="container text-center">Copyright &copy; JBP</footer>
 </body>
 </html>

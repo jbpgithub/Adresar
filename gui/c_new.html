@@ -1,57 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>Novi kontakt</title>
+    <meta charset="UTF-8">
+    <!-- Start Responsive Web Design - Bootstrap  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- End Responsive Web Design - Bootstrap  -->
+    <link rel="stylesheet" href="css/myBootstrap.css">
+    <!--
     <link rel="stylesheet" href="css/stil.css">
-    <style>
-input[type=text] {
-    width: 100%;
-}
-</style>
+    -->
 </head>
 <body>
 <header>
-    <h1>Adresar</h1>
+    <div class="container page-header media">
+        <div class="media-left media-middle">
+            <img src="img/jbp_tb.png" class="media-object" alt="jpb logo" style="height:50px;">
+        </div>
+        <div class="media-body">
+            <h1>Adresar</h1>
+        </div>
+    </div>
 </header>
-<ul>
-    <li><a href="meni.html">Izbornik</a></li>
-    <li><a href="c_new.html">Novi kontakt</a></li>
-    <li><a href="c_list.html">Prikaz kontakta</a></li>
-    <li><a href="c_edit.html">Uredi kontakt</a></li>
-    <li style="float: right"><a href="login.html">Odjava</a></li>
-</ul>
+<!-- Navigation Bars -->
+<nav class="container navbar navbar-inverse">
+    <!-- -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
 
-<table><tr><th>NOVI KONTAKT</th></tr></table>
-<form action="c_list.html">
-<table id="novi">
-           <tr>
-               <th>Ime Prezime:</th>
-               <td><input type="text" name="imeprezime" title="Unesite Ime Prezime"/></td>
-           </tr>
-    <tr><th>Email:</th>
-        <td><input type="text" name="email" title="Unesite email"/></td></tr>
-    <tr><th>Telefon:</th>
-        <td><input type="text" name="tel" title="Unesite broj telefon"/></td></tr>
-    <tr><th>Faks:</th>
-        <td><input type="text" name="fax" title="Unesite broj faksa"/></td></tr>
-    <tr><th>Mobitel:</th>
-        <td><input type="text" name="mob" title="Unesite broj mobitela"/></td></tr>
-    <tr><th>Spol:</th><td><select name="spol">
-        <option value="men">Muško</option>
-        <option value="female">Žensko</option>
-        <option value="other">Ne zna ni sam</option>
-    </select></td></tr>
-    <tr><th>Adresa:</th>
-        <td><input type="text" name="adresa" title="Unesite adresu"/></td></tr>
-    <tr><th>Grad:</th>
-        <td><input type="text" name="Grad" title="Unesite grad"/></td></tr>
-    <tr><th>Država:</th>
-        <td><input type="text" name="Država" title="Unesite državu"/></td></tr>
-</table>
-    <input type="submit" value="Spremi">
-</form>
+        <form class="navbar-form" role="search">
+            <div class="form-group input-group">
+                <input type="text" class="form-control" placeholder="Traži..">
+                <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">
+                            <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+            </div>
+        </form>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+            <li><a href="meni.html">Izbornik</a></li>
+            <!--<li><a href="c_new.html">Novi kontakt</a></li>-->
+            <li><a href="c_list.html">Svi kontakti</a></li>
+            <!-- <li><a href="c_edit.html">Uredi kontakt</a></li>-->
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="login.html"><span class="glyphicon glyphicon-log-out"></span> Odjava</a></li>
+        </ul>
+    </div>
+</nav>
+<!-- Navigation Bars End -->
 
-    <footer>Copyright &copy; JBP</footer>
+<!-- Content -->
+<div class="container">
+    <div class="well">
+        <h3 class="text-center">NOVI KONTAKT</h3>
+        <form action="c_list.html">
+            <div class="form-group">
+                <label for="name">Ime Prezime:</label>
+                <input type="text" class="form-control" id="name" placeholder="Unesi Ime Prezime:">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Unesi email:">
+            </div>
+            <div class="form-group">
+                <label for="tel">Lozinka:</label>
+                <input type="text" class="form-control" id="tel" placeholder="Unesi broj telefona:">
+            </div>
+            <div class="form-group">
+                <label for="fax">Faks:</label>
+                <input type="text" class="form-control" id="fax" placeholder="Unesi broj faksa:">
+            </div>
+            <div class="form-group">
+                <label for="mob">Mobitel:</label>
+                <input type="text" class="form-control" id="mob" placeholder="Unesi broj mobitela:">
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" value="men">Muško</label>
+                <label><input type="checkbox" value="female">Žensko</label>
+                <label><input type="checkbox" value="other">Nezna ni sam</label>
+            </div>
+            <div class="form-group">
+                <label for="adresa">Adresa:</label>
+                <input type="text" class="form-control" id="adresa" placeholder="Unesi adresu:">
+            </div>
+            <div class="form-group">
+                <label for="grad">Grad:</label>
+                <input type="text" class="form-control" id="grad" placeholder="Unesi grad:">
+            </div>
+            <div class="form-group">
+                <label for="drzava">Država:</label>
+                <input type="text" class="form-control" id="drzava" placeholder="Unesi državu:">
+            </div>
+            <button type="submit" class="btn btn-default">Spremi</button>
+        </form>
+    </div>
+</div>
+<!-- End Content  -->
+
+<footer class="container text-center">Copyright &copy; JBP</footer>
 </body>
 </html>

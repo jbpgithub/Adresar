@@ -1,26 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Izbornik</title>
     <meta charset="UTF-8">
-    <title>Prijava korisnika</title>
+    <!-- Start Responsive Web Design - Bootstrap  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- End Responsive Web Design - Bootstrap  -->
+    <link rel="stylesheet" href="css/myBootstrap.css">
+    <!--
     <link rel="stylesheet" href="css/stil.css">
+    -->
 </head>
 <body>
-<header><h1>Adresar</h1></header>
+<header>
+    <div class="container page-header media">
+        <div class="media-left media-middle">
+            <img src="img/jbp_tb.png" class="media-object" alt="jpb logo" style="height:50px;">
+        </div>
+        <div class="media-body">
+            <h1>Adresar</h1>
+        </div>
+    </div>
+</header>
 
+<nav class="container navbar navbar-inverse">
+</nav>
 
-<form action="meni.html">
-    <fieldset>
-        <legend><h3>Prijava u aplikaciju</h3></legend>
-        Korisničko ime: <br>
-        <input type="text" name="korisnik" title="Unesite korisničko ime"/><br>
-        Lozinka:<br>
-        <input type="text" name="lozinka" title="Unesite lozinku"/><br><br>
-        <input type="submit" value="Prijavi se" title="Klikni za prijavu">
-    </fieldset>
-</form>
+<!-- Content -->
+<div class="container">
+    <div class="well">
+        <h4 class="text-center">Prijava u aplikaciju</h4>
+        <form action="meni.html">
+            <div class="form-group">
+                <label for="user">Korisničko ime:</label>
+                <input type="text" class="form-control" id="user" placeholder="Unesi korisničko ime:">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Lozinka:</label>
+                <input type="password" class="form-control" id="pwd" placeholder="Unesi lozinku">
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox">Zapamti me</label>
+            </div>
+            <button type="submit" class="btn btn-default">Prijavi se</button>
+        </form>
+    </div>
+</div>
+<!-- End Content  -->
 
-<p>Za prijavu unesite korisničko ime i lozinku.</p>
-<footer>Copyright &copy; JBP</footer>
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+
+</script>
+
+<footer class="container text-center">Copyright &copy; JBP</footer>
+
 </body>
+
 </html>
