@@ -1,16 +1,13 @@
 // JS for Adresar
 
-//Bootstrap
-/*
-$(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip();
-});
-*/
-
 //JS for login.html
-
+//check for login.html
+//document.getElementById("logInForm").addEventListener("submit", validateLogIn);
+var logIn = document.getElementById("logInHtml");
+if (logIn != null){
+    document.getElementById("logInForm").addEventListener("submit", validateLogIn);
 //validate log in
-function validateLogIn() {
+function validateLogIn(event) {
 	var uVal, pVal, valError;
 	uVal = document.getElementById("user").value;
 	pVal = document.getElementById("pwd").value;
@@ -36,14 +33,21 @@ function validateLogIn() {
     }
 
 	if (valError == true) {
+	    //alert("The form was submitted");
+	    event.preventDefault()
 		return false;
     }
 }
 
-//JS for c_new.html
+}
 
+//JS for c_new.html
+//check for c_new.html
+var newContactHtml = document.getElementById("cNewHtml");
+if (newContactHtml != null){
+    document.getElementById("newContactForm").addEventListener("submit", validateNewContact);
 //validate new contact
-function validateNewContact() {
+function validateNewContact(event) {
 	//only one of this fields are required for new contact
 	var conError, conName, conEmail, conTel, conFax, conMob;
 	// optional fields
@@ -101,8 +105,11 @@ function validateNewContact() {
 	 	document.getElementById("fcountry").className = "form-group has-warning";
     }	
 	if (conError == 5) {
+		event.preventDefault()
 		document.getElementById("errormessage").innerHTML = "Unesite barem "
 		+ "jedno polje označeno crvenom bojom prije spremanja!"
 		return false;
     }
+}
+
 }

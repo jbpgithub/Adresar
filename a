@@ -1,0 +1,46 @@
+[33mcommit 75e45fc9665f3fa146680fccf974d2c38135e6ac[m
+Author: jbpgithub <holy.torturer@gmail.com>
+Date:   Thu Jan 5 04:12:15 2017 +0100
+
+    JavaScript Form Validation
+    
+    Added JavaScript Validation for login.html and c_new.html
+
+[33mcommit 99b87ff996b0568a15479d49138df7061902b07d[m
+Author: jbpgithub <holy.torturer@gmail.com>
+Date:   Sat Dec 31 17:35:43 2016 +0100
+
+    Bootstrap
+    
+    Responsive Web Design - Bootstrap
+
+[33mcommit ce203d13b160c35663bd196969b6d7387a5fe5a8[m
+Merge: d4eab92 826b11a
+Author: jbpgithub <holy.torturer@gmail.com>
+Date:   Fri Dec 23 00:13:37 2016 +0100
+
+    Merge branch 'master' of https://github.com/jbpgithub/Adresar
+
+[33mcommit d4eab921556ba204565bac113599ef8c7930e881[m
+Author: jbpgithub <holy.torturer@gmail.com>
+Date:   Fri Dec 23 00:12:36 2016 +0100
+
+    Created .gitignore file
+
+[33mcommit 826b11ae2388fb1d01b5f22af138e7a842790c57[m
+Author: jbpgithub <holy.torturer@gmail.com>
+Date:   Thu Dec 22 23:53:16 2016 +0100
+
+    Update README.md
+
+[33mcommit 7c4b0670e0e96ff0181d05ca20e5818dc18d15a5[m
+Author: jbpgithub <holy.torturer@gmail.com>
+Date:   Thu Dec 22 23:39:16 2016 +0100
+
+    Create README
+
+[33mcommit 841acc44afd97c87114d749ea4a5ff48059d06c8[m
+Author: jbpgithub <holy.torturer@gmail.com>
+Date:   Thu Dec 22 01:25:25 2016 +0100
+
+    Initial commit
