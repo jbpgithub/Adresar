@@ -33,14 +33,17 @@
 <div class="container">
     <div class="well">
         <h4 class="text-center">Prijava u aplikaciju</h4>
-        <form action="meni.html">
-            <div class="form-group">
+        <form action="meni.html" onsubmit="return validateLogIn()" method="post"> <!---->
+            <div id="uname" class="form-group">
                 <label for="user">Korisničko ime:</label>
-                <input type="text" class="form-control" id="user" placeholder="Unesi korisničko ime:">
+                    <div><p id="username" class="text-danger"></p></div>
+                <input type="text" class="form-control" id="user" placeholder="Unesite korisničko ime:">
+
             </div>
-            <div class="form-group">
+            <div id="password" class="form-group">
                 <label for="pwd">Lozinka:</label>
-                <input type="password" class="form-control" id="pwd" placeholder="Unesi lozinku">
+                <div><p id="pass" class="text-danger"></p></div>
+                <input type="password" class="form-control" id="pwd" placeholder="Unesite lozinku">
             </div>
             <div class="checkbox">
                 <label><input type="checkbox">Zapamti me</label>
@@ -51,15 +54,9 @@
 </div>
 <!-- End Content  -->
 
-<script>
-$(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip();
-});
 
-</script>
 
 <footer class="container text-center">Copyright &copy; JBP</footer>
-
+<script src="js/adresar.js"></script>
 </body>
-
 </html>

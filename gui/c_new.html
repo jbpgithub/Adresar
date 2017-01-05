@@ -64,50 +64,85 @@
 <div class="container">
     <div class="well">
         <h3 class="text-center">NOVI KONTAKT</h3>
-        <form action="c_list.html">
-            <div class="form-group">
-                <label for="name">Ime Prezime:</label>
-                <input type="text" class="form-control" id="name" placeholder="Unesi Ime Prezime:">
+        <h4 id="errormessage" class="text-center text-danger"></h4>
+        <form action="c_list.html" class="form-horizontal" onsubmit="return validateNewContact()" method="post">
+            <div id="fname" class="form-group">
+                <label class="control-label col-sm-2" for="name">Ime Prezime:</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="name" placeholder="Unesite Ime Prezime:">
+                </div>
+            </div>
+            <div id="femail" class="form-group">
+                <label class="control-label col-sm-2" for="email">Email:</label>
+                <div class="col-sm-9">
+                    <input type="email" class="form-control " id="email" placeholder="Unesite email:">
+                </div>
+            </div>
+            <div id="ftel" class="form-group">
+                <label class="control-label col-sm-2" for="tel">Telefon:</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="tel" placeholder="Unesite broj telefona:">
+                </div>
+            </div>
+            <div id="ffax" class="form-group">
+                <label class="control-label col-sm-2" for="fax">Faks:</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="fax" placeholder="Unesite broj faksa:">
+                </div>
+            </div>
+            <div id="fmob" class="form-group">
+                <label class="control-label col-sm-2" for="mob">Mobitel:</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="mob" placeholder="Unesite broj mobitela:">
+                </div>
+            </div>
+            <div id="faddress" class="form-group">
+                <label class="control-label col-sm-2" for="address">Adresa:</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="address" placeholder="Unesite adresu:">
+                </div>
+            </div>
+            <div id="fcity" class="form-group">
+                <label class="control-label col-sm-2" for="city">Grad:</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="city" placeholder="Unesite grad:">
+                </div>
+            </div>
+            <div id="fcountry" class="form-group">
+                <label class="control-label col-sm-2" for="country">Država:</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="country" placeholder="Unesite državu:">
+                </div>
             </div>
             <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" class="form-control" id="email" placeholder="Unesi email:">
+                <label class="control-label col-sm-2" for="remark">Napomena:</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="remark" placeholder="Unesite napomenu:">
+                </div>
             </div>
-            <div class="form-group">
-                <label for="tel">Lozinka:</label>
-                <input type="text" class="form-control" id="tel" placeholder="Unesi broj telefona:">
-            </div>
-            <div class="form-group">
-                <label for="fax">Faks:</label>
-                <input type="text" class="form-control" id="fax" placeholder="Unesi broj faksa:">
-            </div>
-            <div class="form-group">
-                <label for="mob">Mobitel:</label>
-                <input type="text" class="form-control" id="mob" placeholder="Unesi broj mobitela:">
-            </div>
+
             <div class="checkbox">
-                <label><input type="checkbox" value="men">Muško</label>
-                <label><input type="checkbox" value="female">Žensko</label>
-                <label><input type="checkbox" value="other">Nezna ni sam</label>
+                <div class="col-sm-2"></div>
+                <div class="col-sm-9">
+                    <label class="control-label"><input type="checkbox" value="men">Muško</label>
+                    <label class="control-label"><input type="checkbox" value="female">Žensko</label>
+                    <label class="control-label"><input type="checkbox" value="other">Nezna ni sam</label>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="adresa">Adresa:</label>
-                <input type="text" class="form-control" id="adresa" placeholder="Unesi adresu:">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-5">
+                <br>
+                <button type="submit" class="btn btn-default">Spremi</button>
             </div>
-            <div class="form-group">
-                <label for="grad">Grad:</label>
-                <input type="text" class="form-control" id="grad" placeholder="Unesi grad:">
-            </div>
-            <div class="form-group">
-                <label for="drzava">Država:</label>
-                <input type="text" class="form-control" id="drzava" placeholder="Unesi državu:">
-            </div>
-            <button type="submit" class="btn btn-default">Spremi</button>
+            <br>
+            <br>
+            <br>
         </form>
     </div>
 </div>
 <!-- End Content  -->
 
 <footer class="container text-center">Copyright &copy; JBP</footer>
+<script src="js/adresar.js"></script>
 </body>
 </html>
