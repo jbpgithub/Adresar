@@ -34,7 +34,7 @@ function validateLogIn(event) {
 
 	if (valError == true) {
 	    //alert("The form was submitted");
-	    event.preventDefault()
+	    event.preventDefault();
 		return false;
     }
 }
@@ -105,7 +105,7 @@ function validateNewContact(event) {
 	 	document.getElementById("fcountry").className = "form-group has-warning";
     }	
 	if (conError == 5) {
-		event.preventDefault()
+		event.preventDefault();
 		document.getElementById("errormessage").innerHTML = "Unesite barem "
 		+ "jedno polje označeno crvenom bojom prije spremanja!"
 		return false;

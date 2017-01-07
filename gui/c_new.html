@@ -9,7 +9,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- End Responsive Web Design - Bootstrap  -->
+    <!-- datepicker -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <link rel="stylesheet" href="css/myBootstrap.css">
+
+    <script src="js/jQ_adresar.js"></script>
     <!--
     <link rel="stylesheet" href="css/stil.css">
     -->
@@ -66,61 +74,66 @@
         <h3 class="text-center">NOVI KONTAKT</h3>
         <h4 id="errormessage" class="text-center text-danger"></h4>
         <form action="c_list.html" id="newContactForm" class="form-horizontal" method="post">
-            <div id="fname" class="form-group">
+            <div id="fname" class="form-group conReqForm">
                 <label class="control-label col-sm-2" for="name">Ime Prezime:</label>
                 <div class="col-sm-9">
-                    <input type="text" class="form-control" id="name" placeholder="Unesite Ime Prezime:">
+                    <input type="text" class="form-control conRequired" id="name" placeholder="Unesite Ime Prezime:">
                 </div>
             </div>
-            <div id="femail" class="form-group">
+            <div id="femail" class="form-group conReqForm">
                 <label class="control-label col-sm-2" for="email">Email:</label>
                 <div class="col-sm-9">
-                    <input type="email" class="form-control " id="email" placeholder="Unesite email:">
+                    <input type="email" class="form-control conRequired " id="email" placeholder="Unesite email:">
                 </div>
             </div>
-            <div id="ftel" class="form-group">
+            <div id="ftel" class="form-group conReqForm">
                 <label class="control-label col-sm-2" for="tel">Telefon:</label>
                 <div class="col-sm-9">
-                    <input type="text" class="form-control" id="tel" placeholder="Unesite broj telefona:">
+                    <input type="text" class="form-control conRequired" id="tel" placeholder="Unesite broj telefona:">
                 </div>
             </div>
-            <div id="ffax" class="form-group">
+            <div id="ffax" class="form-group conReqForm">
                 <label class="control-label col-sm-2" for="fax">Faks:</label>
                 <div class="col-sm-9">
-                    <input type="text" class="form-control" id="fax" placeholder="Unesite broj faksa:">
+                    <input type="text" class="form-control conRequired" id="fax" placeholder="Unesite broj faksa:">
                 </div>
             </div>
-            <div id="fmob" class="form-group">
+            <div id="fmob" class="form-group conReqForm">
                 <label class="control-label col-sm-2" for="mob">Mobitel:</label>
                 <div class="col-sm-9">
-                    <input type="text" class="form-control" id="mob" placeholder="Unesite broj mobitela:">
+                    <input type="text" class="form-control conRequired" id="mob" placeholder="Unesite broj mobitela:">
                 </div>
             </div>
-            <div id="faddress" class="form-group">
+            <div id="faddress" class="form-group conOptForm">
                 <label class="control-label col-sm-2" for="address">Adresa:</label>
                 <div class="col-sm-9">
-                    <input type="text" class="form-control" id="address" placeholder="Unesite adresu:">
+                    <input type="text" class="form-control conOptional" id="address" placeholder="Unesite adresu:">
                 </div>
             </div>
-            <div id="fcity" class="form-group">
+            <div id="fcity" class="form-group conOptForm">
                 <label class="control-label col-sm-2" for="city">Grad:</label>
                 <div class="col-sm-9">
-                    <input type="text" class="form-control" id="city" placeholder="Unesite grad:">
+                    <input type="text" class="form-control conOptional" id="city" placeholder="Unesite grad:">
                 </div>
             </div>
-            <div id="fcountry" class="form-group">
+            <div id="fcountry" class="form-group conOptForm">
                 <label class="control-label col-sm-2" for="country">Država:</label>
                 <div class="col-sm-9">
-                    <input type="text" class="form-control" id="country" placeholder="Unesite državu:">
+                    <input type="text" class="form-control conOptional" id="country" placeholder="Unesite državu:">
                 </div>
             </div>
-            <div class="form-group">
+            <div class="form-group conOptForm">
                 <label class="control-label col-sm-2" for="remark">Napomena:</label>
                 <div class="col-sm-9">
-                    <input type="text" class="form-control" id="remark" placeholder="Unesite napomenu:">
+                    <input type="text" class="form-control conOptional" id="remark" placeholder="Unesite napomenu:">
                 </div>
             </div>
-
+            <div id="fdatepicker" class="form-group conOptForm">
+                <label class="control-label col-sm-2" for="datepicker">Datum rođenja:</label>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control conOptional" id="datepicker" placeholder="Datum rođenja:">
+                </div>
+            </div>
             <div class="checkbox">
                 <div class="col-sm-2"></div>
                 <div class="col-sm-9">
@@ -143,6 +156,6 @@
 <!-- End Content  -->
 
 <footer class="container text-center">Copyright &copy; JBP</footer>
-<script src="js/adresar.js"></script>
+<!--<script src="js/adresar.js"></script>-->
 </body>
 </html>
